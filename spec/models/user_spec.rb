@@ -29,4 +29,17 @@ RSpec.describe User, type: :model do
       expect(user_with_blank_email).to_not be_valid
     end
   end
+
+  describe "confirmation" do
+    it "user should not be confirmed when initially signing up" do
+      user = User.create!(email: "Joe@test.com", password: "password")
+      expect(user.confirmed?).to be(false)
+    end
+
+    it "user should be confirmed after accepting email instructions" do
+      user = User.create!(email: "Joe@test.com", password: "password")
+      user.confirm
+      expect(user.confirmed?).to be(true)
+    end
+  end
 end
