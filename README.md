@@ -6,7 +6,7 @@ Blocmetrics is an analytics service and reporting tool that you can use with web
 - A server-side API that captures and saves those events to a database.
 - A Rails application that displays the captured event data for a user.
 
-This app powers Blocmetrics at *coming soon*
+This app powers Blocmetrics at https://salty-island-5717.herokuapp.com/
 
 ## Getting Started
 
