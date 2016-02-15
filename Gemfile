@@ -14,6 +14,7 @@ gem 'coffee-script-source', '~> 1.8.0'
 
 gem 'devise'
 
+gem 'faker'
 gem 'figaro',               '~> 1.0'
 
 gem 'jquery-rails'
