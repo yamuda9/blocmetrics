@@ -11,7 +11,16 @@ submitted <%= time_ago_in_words(@registered_applications.created_at) %> ago
   <div class="col-md-8">
     <p class="lead">
       <br />
-      <%= @registered_applications.url %>
+      Website: <a href="<%= @registered_applications.url %>"><%= @registered_applications.url %></a>
     </p>
+
+    <p class="lead">
+      <%= @registered_applications.events.count %> Event(s):
+    </p>
+
+    <% @registered_applications.events.each do |event| %>
+      <%= event.name.capitalize %>
+      <br>
+    <% end %>
   </div>
 </div>
