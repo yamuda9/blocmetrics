@@ -22,5 +22,7 @@ submitted <%= time_ago_in_words(@registered_applications.created_at) %> ago
       <%= event.name.capitalize %>
       <br>
     <% end %>
+
+    <%= pie_chart @registered_applications.events.group(:name).count %>
   </div>
 </div>
